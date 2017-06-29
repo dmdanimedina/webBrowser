@@ -47,6 +47,7 @@
 		2E6863351EC3A25300B17FC3 /* WebBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6863391EC3A25300B17FC3 /* WebBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebBrowserUITests.swift; sourceTree = "<group>"; };
 		2E68633B1EC3A25300B17FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E6863651EC646DA00B17FC3 /* WebBrowser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebBrowser.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		2E6863181EC3A25300B17FC3 /* WebBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				2E6863651EC646DA00B17FC3 /* WebBrowser.entitlements */,
 				2E6863191EC3A25300B17FC3 /* AppDelegate.swift */,
 				2E68631B1EC3A25300B17FC3 /* ViewController.swift */,
 				2E68631D1EC3A25300B17FC3 /* Main.storyboard */,
@@ -193,7 +195,19 @@
 				TargetAttributes = {
 					2E6863151EC3A25200B17FC3 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 45G735U63R;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2E6863291EC3A25300B17FC3 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -412,9 +426,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WebBrowser/WebBrowser.entitlements;
+				DEVELOPMENT_TEAM = 45G735U63R;
 				INFOPLIST_FILE = WebBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samtech.WebBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = cl.Samtech.WebDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -424,9 +441,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WebBrowser/WebBrowser.entitlements;
+				DEVELOPMENT_TEAM = 45G735U63R;
 				INFOPLIST_FILE = WebBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.samtech.WebBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = cl.Samtech.WebDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -505,6 +525,7 @@
 				2E6863401EC3A25300B17FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E6863411EC3A25300B17FC3 /* Build configuration list for PBXNativeTarget "WebBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +534,7 @@
 				2E6863431EC3A25300B17FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E6863441EC3A25300B17FC3 /* Build configuration list for PBXNativeTarget "WebBrowserUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +543,7 @@
 				2E6863461EC3A25300B17FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
